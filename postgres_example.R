@@ -3,10 +3,11 @@
 #require library
 require("RPostgreSQL")
 
-# create a connection
-# save the password that we can "hide" it as best as we can by collapsing it
-pw <- { "" }
 
+source("accounts.R")
+
+
+# create a connection
 # loads the PostgreSQL driver
 drv <- dbDriver("PostgreSQL")
 
@@ -14,8 +15,7 @@ drv <- dbDriver("PostgreSQL")
 # note that "con" will be used later in each connection to the database
 con <- dbConnect(drv, dbname = "dvddrental",
                  host = "localhost", port = 5432,
-                 user = "davidladowitz", password = pw)
-rm(pw) # removes the password
+                 localhost.username, password = localhost.password)
 
 # check for the cartable
 dbExistsTable(con, "film")

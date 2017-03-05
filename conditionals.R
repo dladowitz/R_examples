@@ -48,6 +48,11 @@ library(stringr)
 print(str_c("Max number is: ", max))
 
 
+print(cat("Max number is: ", max))
+cat("Max number is: ", max)
+#cat("It can't be done with numbers like: ", max)
+
+
 
 
 
