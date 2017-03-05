@@ -15,3 +15,43 @@ if (is.matrix(x) == TRUE){
 } else {
   print("X is NOT a Matrix")
 }
+
+x <- c(3,7,1)
+
+one   <- x[1]
+two   <- x[2]
+three <- x[3]
+
+print(one)
+print(two)
+print(three)
+
+x <- c(20, 10, 1)
+
+one   <- x[1]
+two   <- x[2]
+three <- x[3]
+
+max <- 0
+if(one > max){
+  max <- one
+}
+if(two > max){
+  max <- two
+}
+if(three > max){
+  max <- three
+}
+
+library(stringr)
+
+print(str_c("Max number is: ", max))
+
+
+
+
+
+
+
+
+
